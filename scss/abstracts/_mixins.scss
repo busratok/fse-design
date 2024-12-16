@@ -1,8 +1,16 @@
 @mixin bg-image($height, $url) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
   height: $height;
   width: 100%;
   background: url($url);
   background-position: center;
   background-size: cover;
   filter: brightness(70%);
+}
+
+@mixin transition($sec) {
+  transition: all $sec;
 }

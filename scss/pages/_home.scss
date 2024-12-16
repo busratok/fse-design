@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "../components/nav";
 
 .home-bg-img-container {
   @include bg-image(100vh, $home-first-bg-img-path);

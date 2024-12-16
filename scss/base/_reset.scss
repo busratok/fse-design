@@ -6,8 +6,7 @@
   box-sizing: border-box;
 }
 
-ul[role="list"],
-ol[role="list"] {
+ul {
   list-style: none;
 }
 
@@ -19,6 +18,10 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+a {
+  text-decoration: none;
 }
 
 input,

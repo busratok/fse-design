@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.nav {
+  height: 10vh;
+  padding: 1rem;
+  &__header {
+    text-align: right;
+  }
+  &__toggle {
+    position: relative;
+    z-index: 6;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+  }
+  &__toggle--rotate {
+    transform: rotate(90deg);
+    @include transition(0.5s);
+  }
+  &__list {
+    display: none;
+    text-align: left;
+    padding: 1rem;
+  }
+  &__show--list {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: $primary-color;
+    opacity: 0.75;
+    z-index: 5;
+  }
+  &__item {
+    padding: 1rem;
+  }
+  &__link {
+    color: white;
+  }
+}
