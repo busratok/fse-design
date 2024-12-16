@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+@include desktop {
+  .nav {
+    &__center {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__toggle {
+      display: none;
+    }
+    &__list {
+      display: flex;
+    }
+    &__link {
+      font-size: 1.2rem;
+    }
+  }
+}

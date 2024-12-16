@@ -14,3 +14,9 @@
 @mixin transition($sec) {
   transition: all $sec;
 }
+
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
