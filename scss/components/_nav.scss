@@ -4,7 +4,11 @@
   height: 10vh;
   padding: 1rem;
   &__header {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 190px;
   }
   &__toggle {
     position: relative;
@@ -27,13 +31,12 @@
   }
   &__show--list {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     background-color: $primary-color;
-    opacity: 0.75;
     z-index: 5;
   }
   &__item {
@@ -41,5 +44,11 @@
   }
   &__link {
     color: white;
+  }
+  &__submenu {
+    display: none;
+  }
+  &__submenu--show {
+    display: block;
   }
 }

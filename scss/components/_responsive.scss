@@ -2,18 +2,48 @@
 
 @include desktop {
   .nav {
+    padding-left: 6rem;
+    padding-right: 3rem;
     &__center {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+    }
+    &__logo {
+      width: 280px;
     }
     &__toggle {
       display: none;
     }
     &__list {
       display: flex;
+      gap: 1.5rem;
+      position: relative;
     }
-    &__link {
-      font-size: 1.2rem;
+    &__item {
+      padding: 0;
+    }
+    &__item:hover {
+      box-shadow: 0 -4px 0 $primary-accent-color;
+    }
+    &__submenu {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: $primary-color;
+      width: 100%;
+      opacity: 0.75;
+      border-bottom: 5px solid $primary-accent-color;
+      padding: 2.5rem;
+    }
+    &__submenu__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 150px;
+      gap: 1.4rem;
+    }
+    &__item--has-submenu:hover .nav__submenu {
+      display: block;
     }
   }
 }
