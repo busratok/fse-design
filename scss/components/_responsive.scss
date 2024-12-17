@@ -1,9 +1,13 @@
 @use "../abstracts" as *;
 
 @include desktop {
-  .nav {
+  .topbar {
     padding-left: 6rem;
     padding-right: 3rem;
+    padding-top: 2rem;
+  }
+
+  .nav {
     &__center {
       display: flex;
       justify-content: space-between;

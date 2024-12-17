@@ -40,7 +40,6 @@ select {
 
 .nav {
   height: 10vh;
-  padding: 1rem;
 }
 .nav__header {
   display: flex;
@@ -91,6 +90,40 @@ select {
   display: block;
 }
 
+.social-links {
+  display: flex;
+  justify-content: end;
+  gap: 0.6rem;
+}
+.social-links__icon {
+  display: flex;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.social-links__icon--default {
+  color: #b2b2b2;
+  border: 1px solid #b2b2b2;
+}
+.social-links__icon--default:hover {
+  background-color: white;
+}
+.social-links__icon--yellow {
+  color: white;
+  border: 1px solid #f0c51a;
+}
+.social-links__icon--yellow:hover {
+  background-color: #f0c51a;
+}
+
+.topbar {
+  padding: 1rem;
+}
+
 .home-bg-img-container {
   position: absolute;
   top: 0;
@@ -105,9 +138,10 @@ select {
 }
 
 @media screen and (min-width: 1025px) {
-  .nav {
+  .topbar {
     padding-left: 6rem;
     padding-right: 3rem;
+    padding-top: 2rem;
   }
   .nav__center {
     display: flex;
