@@ -4,6 +4,7 @@
 @use "../components/topbar";
 @use "../components/left-overlay";
 @use "../components/right-overlay";
+@use "../components/tag";
 
 .home-bg-img-container {
   @include bg-image(100vh, $home-first-bg-img-path);

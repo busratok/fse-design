@@ -19,3 +19,22 @@ submenus.forEach((submenu) => {
     }
   });
 });
+
+// Tagline Slider
+let taglineIndex = 0;
+showTaglines();
+
+function showTaglines() {
+  let i;
+  let taglines = document.getElementsByClassName("tagline");
+  for (i = 0; i < taglines.length; i++) {
+    taglines[i].style.display = "none";
+  }
+  taglineIndex++;
+  if (taglineIndex > taglines.length) {
+    taglineIndex = 1;
+  }
+
+  taglines[taglineIndex - 1].style.display = "block";
+  setTimeout(showTaglines, 5000); // Change image every 2 seconds
+}

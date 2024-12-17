@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.tagline {
+  display: none;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  z-index: 2;
+  text-transform: uppercase;
+
+  &__generic {
+    color: $primary-accent-color;
+    font-size: 1.5rem;
+  }
+
+  &__slogan {
+    color: white;
+    font-size: 3.6rem;
+    font-weight: bold;
+    @include slideAnimation("slideIn", 2s);
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: 5%;
+      width: 101%;
+      height: 15px;
+      background: $primary-accent-color;
+    }
+  }
+}

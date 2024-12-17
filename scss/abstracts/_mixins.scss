@@ -24,6 +24,21 @@
   }
 }
 
+@mixin slideAnimation($name, $duration) {
+  animation-name: #{$name};
+  animation-duration: #{$duration};
+  @keyframes #{$name} {
+    0% {
+      opacity: 0.4;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 @mixin transition($sec) {
   transition: all $sec;
 }

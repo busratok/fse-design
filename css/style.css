@@ -189,6 +189,46 @@ select {
   clip-path: polygon(87.5% 75%, 100% 50%, 100% 75%);
 }
 
+.tagline {
+  display: none;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  z-index: 2;
+  text-transform: uppercase;
+}
+.tagline__generic {
+  color: #f0c51a;
+  font-size: 1.5rem;
+}
+.tagline__slogan {
+  color: white;
+  font-size: 3.6rem;
+  font-weight: bold;
+  animation-name: slideIn;
+  animation-duration: 2s;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0.4;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tagline__slogan:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 5%;
+  width: 101%;
+  height: 15px;
+  background: #f0c51a;
+}
+
 .home-bg-img-container {
   position: absolute;
   top: 0;
