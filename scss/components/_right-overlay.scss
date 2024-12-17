@@ -1,0 +1,60 @@
+@use "../abstracts" as *;
+
+.right-overlay {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 700px;
+  height: 100%;
+  z-index: 1;
+  &__content {
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    color: #121a44;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    &__text {
+      text-transform: uppercase;
+      &--bold {
+        font-weight: bold;
+      }
+    }
+  }
+  &__hidden {
+    opacity: 0;
+  }
+  &__img {
+    width: 1.5rem;
+  }
+  &__triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 700px;
+    height: 100%;
+    &--yellow {
+      background-color: $primary-accent-color;
+      clip-path: polygon(87.5% 75%, 100% 100%, 75% 100%);
+      cursor: pointer;
+      &:hover .right-overlay__hidden {
+        opacity: 1;
+      }
+    }
+    &--navy {
+      background-color: $primary-color;
+      clip-path: polygon(87.5% 75%, 100% 100%, 100% 75%);
+    }
+    &--transparent {
+      background-color: $primary-color;
+      opacity: 0.7;
+      clip-path: polygon(87.5% 75%, 100% 50%, 100% 75%);
+    }
+  }
+}
