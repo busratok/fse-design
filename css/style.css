@@ -82,6 +82,7 @@ select {
 }
 .nav__link {
   color: white;
+  line-height: 2rem;
 }
 .nav__submenu {
   display: none;
@@ -239,7 +240,7 @@ select {
   background: url("/assets/images/first.jpg");
   background-position: center;
   background-size: cover;
-  filter: brightness(70%);
+  filter: brightness(60%);
   animation: home-bgImage-container 5s ease-in-out infinite alternate;
 }
 @keyframes home-bgImage-container {
