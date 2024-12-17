@@ -6,6 +6,39 @@
     padding-right: 3rem;
     padding-top: 2rem;
   }
+  .left-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 100%;
+    z-index: 1;
+    &__shape {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 700px;
+      height: 100%;
+      background-color: $primary-color;
+      &--pentagon {
+        background: linear-gradient(
+          to bottom,
+          $secondary-color,
+          $primary-color,
+          $secondary-color
+        );
+        clip-path: polygon(75% 0%, 87.5% 25%, 50% 100%, 0% 100%, 0% 0%);
+      }
+      &--top {
+        clip-path: polygon(75% 0%, 100% 0%, 87.5% 25%);
+      }
+      &--bottom {
+        opacity: 0.7;
+        clip-path: polygon(62.5% 75%, 75% 100%, 50% 100%);
+      }
+    }
+  }
 
   .nav {
     &__center {

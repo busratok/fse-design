@@ -2,6 +2,8 @@
 @use "../components/nav";
 @use "../components/social-links";
 @use "../components/topbar";
+@use "../components/left-overlay";
+
 .home-bg-img-container {
   @include bg-image(100vh, $home-first-bg-img-path);
 }
