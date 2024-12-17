@@ -4,6 +4,13 @@
 @use "../components/topbar";
 @use "../components/left-overlay";
 @use "../components/right-overlay";
+
 .home-bg-img-container {
   @include bg-image(100vh, $home-first-bg-img-path);
+  @include background-animation(
+    "home-bgImage-container",
+    5s,
+    "/assets/images/first.jpg",
+    "/assets/images/second.jpg"
+  );
 }

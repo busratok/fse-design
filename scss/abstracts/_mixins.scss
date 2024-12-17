@@ -11,6 +11,19 @@
   filter: brightness(70%);
 }
 
+@mixin background-animation($name, $duration, $image-start, $image-end) {
+  animation: #{$name} #{$duration} ease-in-out infinite alternate;
+
+  @keyframes #{$name} {
+    0% {
+      background-image: url(#{$image-start});
+    }
+    100% {
+      background-image: url(#{$image-end});
+    }
+  }
+}
+
 @mixin transition($sec) {
   transition: all $sec;
 }

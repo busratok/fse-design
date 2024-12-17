@@ -200,6 +200,15 @@ select {
   background-position: center;
   background-size: cover;
   filter: brightness(70%);
+  animation: home-bgImage-container 5s ease-in-out infinite alternate;
+}
+@keyframes home-bgImage-container {
+  0% {
+    background-image: url(/assets/images/first.jpg);
+  }
+  100% {
+    background-image: url(/assets/images/second.jpg);
+  }
 }
 
 @media screen and (min-width: 1025px) {
