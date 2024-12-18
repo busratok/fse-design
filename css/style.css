@@ -38,6 +38,10 @@ select {
   font-size: inherit;
 }
 
+.left-overlay {
+  display: none;
+}
+
 .nav {
   height: 10vh;
 }
@@ -91,43 +95,82 @@ select {
   display: block;
 }
 
-.topnav {
-  display: flex;
-  justify-content: end;
-  gap: 0.6rem;
+@media screen and (min-width: 1025px) {
+  .topbar {
+    padding-left: 6rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+  }
+  .left-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 100%;
+    z-index: 1;
+  }
+  .left-overlay__shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 100%;
+    background-color: #1c345e;
+  }
+  .left-overlay__shape--pentagon {
+    background: linear-gradient(to bottom, #121a44, #1c345e, #121a44);
+    clip-path: polygon(75% 0%, 87.5% 25%, 50% 100%, 0% 100%, 0% 0%);
+  }
+  .left-overlay__shape--top {
+    clip-path: polygon(75% 0%, 100% 0%, 87.5% 25%);
+  }
+  .left-overlay__shape--bottom {
+    opacity: 0.7;
+    clip-path: polygon(62.5% 75%, 75% 100%, 50% 100%);
+  }
+  .nav__center {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__logo {
+    width: 280px;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+  }
+  .nav__item {
+    padding: 0;
+  }
+  .nav__item:hover {
+    box-shadow: 0 -4px 0 #f0c51a;
+  }
+  .nav__submenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1c345e;
+    width: 100%;
+    opacity: 0.75;
+    border-bottom: 5px solid #f0c51a;
+    padding: 2.5rem;
+  }
+  .nav__submenu__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 150px;
+    gap: 1.4rem;
+  }
+  .nav__item--has-submenu:hover .nav__submenu {
+    display: block;
+  }
 }
-.topnav__icons {
-  display: flex;
-  gap: 0.3rem;
-}
-.topnav__icon {
-  display: flex;
-  font-size: 14px;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.topnav__icon--default {
-  color: #b2b2b2;
-  border: 1px solid #b2b2b2;
-}
-.topnav__icon--default:hover {
-  background-color: white;
-}
-
-.topbar {
-  padding: 1rem;
-  position: relative;
-  z-index: 10;
-}
-
-.left-overlay {
-  display: none;
-}
-
 .right-overlay {
   display: block;
   position: absolute;
@@ -185,46 +228,6 @@ select {
   background-color: #1c345e;
   opacity: 0.7;
   clip-path: polygon(87.5% 75%, 100% 50%, 100% 75%);
-}
-
-.tagline {
-  display: none;
-  position: absolute;
-  bottom: 15%;
-  left: 5%;
-  z-index: 2;
-  text-transform: uppercase;
-}
-.tagline__generic {
-  color: #f0c51a;
-  font-size: 1.5rem;
-}
-.tagline__slogan {
-  color: white;
-  font-size: 3.6rem;
-  font-weight: bold;
-  animation-name: slideIn;
-  animation-duration: 2s;
-}
-@keyframes slideIn {
-  0% {
-    opacity: 0.4;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.tagline__slogan:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  bottom: 5%;
-  width: 101%;
-  height: 15px;
-  background: #f0c51a;
 }
 
 .search-form {
@@ -305,6 +308,79 @@ select {
   border: none;
 }
 
+.topnav {
+  display: flex;
+  justify-content: end;
+  gap: 0.6rem;
+}
+.topnav__icons {
+  display: flex;
+  gap: 0.3rem;
+}
+.topnav__icon {
+  display: flex;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.topnav__icon--default {
+  color: #b2b2b2;
+  border: 1px solid #b2b2b2;
+}
+.topnav__icon--default:hover {
+  background-color: white;
+}
+
+.tagline {
+  display: none;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  z-index: 2;
+  text-transform: uppercase;
+}
+.tagline__generic {
+  color: #f0c51a;
+  font-size: 1.5rem;
+}
+.tagline__slogan {
+  color: white;
+  font-size: 3.6rem;
+  font-weight: bold;
+  animation-name: slideIn;
+  animation-duration: 2s;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0.4;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tagline__slogan:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 5%;
+  width: 101%;
+  height: 15px;
+  background: #f0c51a;
+}
+
+.topbar {
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
 .home-bg-img-container {
   position: absolute;
   top: 0;
@@ -324,83 +400,6 @@ select {
   }
   100% {
     background-image: url(/assets/images/second.jpg);
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .topbar {
-    padding-left: 6rem;
-    padding-right: 3rem;
-    padding-top: 2rem;
-  }
-  .left-overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 700px;
-    height: 100%;
-    z-index: 1;
-  }
-  .left-overlay__shape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 700px;
-    height: 100%;
-    background-color: #1c345e;
-  }
-  .left-overlay__shape--pentagon {
-    background: linear-gradient(to bottom, #121a44, #1c345e, #121a44);
-    clip-path: polygon(75% 0%, 87.5% 25%, 50% 100%, 0% 100%, 0% 0%);
-  }
-  .left-overlay__shape--top {
-    clip-path: polygon(75% 0%, 100% 0%, 87.5% 25%);
-  }
-  .left-overlay__shape--bottom {
-    opacity: 0.7;
-    clip-path: polygon(62.5% 75%, 75% 100%, 50% 100%);
-  }
-  .nav__center {
-    display: flex;
-    justify-content: space-between;
-  }
-  .nav__logo {
-    width: 280px;
-  }
-  .nav__toggle {
-    display: none;
-  }
-  .nav__list {
-    display: flex;
-    gap: 1.5rem;
-    position: relative;
-  }
-  .nav__item {
-    padding: 0;
-  }
-  .nav__item:hover {
-    box-shadow: 0 -4px 0 #f0c51a;
-  }
-  .nav__submenu {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #1c345e;
-    width: 100%;
-    opacity: 0.75;
-    border-bottom: 5px solid #f0c51a;
-    padding: 2.5rem;
-  }
-  .nav__submenu__list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 150px;
-    gap: 1.4rem;
-  }
-  .nav__item--has-submenu:hover .nav__submenu {
-    display: block;
   }
 }
 
