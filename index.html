@@ -1,135 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Paradise High School</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Paradise High School</title>
-</head>
+  <body>
+    <header>
+      <div class="home-bg-img-container"></div>
+      <div class="left-overlay">
+        <div class="left-overlay__shape left-overlay__shape--pentagon"></div>
+        <div class="left-overlay__shape left-overlay__shape--top"></div>
+        <div class="left-overlay__shape left-overlay__shape--bottom"></div>
+      </div>
 
-<body>
-  <header>
-    <div class="home-bg-img-container"></div>
-    <div class="left-overlay">
-      <div class="left-overlay__shape left-overlay__shape--pentagon"></div>
-      <div class="left-overlay__shape left-overlay__shape--top"></div>
-      <div class="left-overlay__shape left-overlay__shape--bottom"></div>
-    </div>
-
-    <div class="topbar">
-      <ul class="social-links">
-        <li class="social-links__icon social-links__icon--default">
-          <i class="fab fa-twitter"></i>
-        </li>
-        <li class="social-links__icon social-links__icon--default">
-          <i class="fas fa-language"></i>
-        </li>
-        <li class="social-links__icon social-links__icon--yellow"><i class="fas fa-search"></i></li>
-        </li>
-      </ul>
-      <nav class="nav">
-        <div class="nav__center">
-          <div class="nav__header">
-            <a href="/">
-              <img src="/assets/images/paradise-high-school-logo.png" alt="Paradise High School Logo"
-                class="nav__logo" />
-            </a>
-            <button class="nav__toggle">
-              <i class="fas fa-bars"></i>
-            </button>
-          </div>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="/" class="nav__link nav__link--active">Home</a>
+      <div class="topbar">
+        <div class="topnav">
+          <ul class="topnav__icons">
+            <li class="topnav__icon topnav__icon--default">
+              <i class="fab fa-twitter"></i>
             </li>
-            <li class="nav__item nav__item--has-submenu">
-              <a href="#" class="nav__link">About Us</a>
-              <div class="nav__submenu">
-                <ul class="nav__submenu__list">
-                  <li class="nav__item">
-                    <a href="" class="nav__link">Headteacher’s Welcome</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link"> Governors</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link"> Policies</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">Our Ethos & Values</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">School History</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">Vacancies</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">Open Evening</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">Year 7 Intake</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link"> Term Dates</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">Upcoming Events</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">Calendar</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav__item">
-              <a href="/" class="nav__link">Admissions</a>
-            </li>
-            <li class="nav__item">
-              <a href="/" class="nav__link">Curriculum</a>
-            </li>
-            <li class="nav__item">
-              <a href="/" class="nav__link">Parents</a>
-            </li>
-            <li class="nav__item">
-              <a href="/" class="nav__link">Safeguarding</a>
-            </li>
-            <li class="nav__item">
-              <a href="/" class="nav__link">Contact Us</a>
+            <li class="topnav__icon topnav__icon--default">
+              <i class="fas fa-language"></i>
             </li>
           </ul>
+          <form id="search-form" class="search-form">
+            <button type="button" class="search-form__icon">
+              <i class="fas fa-search"></i>
+            </button>
+            <input
+              type="text"
+              class="search-form__input"
+              placeholder="Search"
+            />
+            <button type="submit" class="search-form__submit">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </form>
         </div>
-      </nav>
-    </div>
-
-    <div class="tagline">
-      <p class="tagline__generic">We are...</p>
-      <p class="tagline__slogan">Respectful</p>
-    </div>
-
-    <div class="tagline">
-      <p class="tagline__generic">We are...</p>
-      <p class="tagline__slogan">Open-minded</p>
-    </div>
-
-    <div class="right-overlay">
-      <div class="right-overlay__triangle right-overlay__triangle--yellow">
-        <div class="right-overlay__content">
-          <img src="/assets/images/feeling-concerned-exclamations.png" alt="exclamation marks" class="right-overlay__hidden">
-          <img src="/assets/images/feeling-concerned-button.png" alt="concerd face" class="right-overlay__img" />
-          <span class="right-overlay__content__text">Feeling</span>
-          <span class="right-overlay__content__text right-overlay__content__text--bold">concerned?</span>
-          <span class="right-overlay__hidden">We can help... </span>
-        </div>
+        <nav class="nav">
+          <div class="nav__center">
+            <div class="nav__header">
+              <a href="/">
+                <img
+                  src="/assets/images/paradise-high-school-logo.png"
+                  alt="Paradise High School Logo"
+                  class="nav__logo"
+                />
+              </a>
+              <button class="nav__toggle">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/" class="nav__link nav__link--active">Home</a>
+              </li>
+              <li class="nav__item nav__item--has-submenu">
+                <a href="#" class="nav__link">About Us</a>
+                <div class="nav__submenu">
+                  <ul class="nav__submenu__list">
+                    <li class="nav__item">
+                      <a href="" class="nav__link">Headteacher’s Welcome</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link"> Governors</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link"> Policies</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link">Our Ethos & Values</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link">School History</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link">Vacancies</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link">Open Evening</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link">Year 7 Intake</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link"> Term Dates</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link">Upcoming Events</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link">Calendar</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link">Admissions</a>
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link">Curriculum</a>
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link">Parents</a>
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link">Safeguarding</a>
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <div class="right-overlay__triangle right-overlay__triangle--navy"></div>
-      <div class="right-overlay__triangle right-overlay__triangle--transparent"></div>
-    </div>
 
-  </header>
+      <div class="tagline">
+        <p class="tagline__generic">We are...</p>
+        <p class="tagline__slogan">Respectful</p>
+      </div>
 
-  <script src="app.js"></script>
-</body>
+      <div class="tagline">
+        <p class="tagline__generic">We are...</p>
+        <p class="tagline__slogan">Open-minded</p>
+      </div>
 
+      <div class="right-overlay">
+        <div class="right-overlay__triangle right-overlay__triangle--yellow">
+          <div class="right-overlay__content">
+            <img
+              src="/assets/images/feeling-concerned-exclamations.png"
+              alt="exclamation marks"
+              class="right-overlay__hidden"
+            />
+            <img
+              src="/assets/images/feeling-concerned-button.png"
+              alt="concerd face"
+              class="right-overlay__img"
+            />
+            <span class="right-overlay__content__text">Feeling</span>
+            <span
+              class="right-overlay__content__text right-overlay__content__text--bold"
+              >concerned?</span
+            >
+            <span class="right-overlay__hidden">We can help... </span>
+          </div>
+        </div>
+        <div
+          class="right-overlay__triangle right-overlay__triangle--navy"
+        ></div>
+        <div
+          class="right-overlay__triangle right-overlay__triangle--transparent"
+        ></div>
+      </div>
+    </header>
+
+    <script src="app.js"></script>
+  </body>
 </html>

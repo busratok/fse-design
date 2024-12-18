@@ -91,12 +91,16 @@ select {
   display: block;
 }
 
-.social-links {
+.topnav {
   display: flex;
   justify-content: end;
   gap: 0.6rem;
 }
-.social-links__icon {
+.topnav__icons {
+  display: flex;
+  gap: 0.3rem;
+}
+.topnav__icon {
   display: flex;
   font-size: 14px;
   border-radius: 50%;
@@ -106,19 +110,12 @@ select {
   align-items: center;
   cursor: pointer;
 }
-.social-links__icon--default {
+.topnav__icon--default {
   color: #b2b2b2;
   border: 1px solid #b2b2b2;
 }
-.social-links__icon--default:hover {
+.topnav__icon--default:hover {
   background-color: white;
-}
-.social-links__icon--yellow {
-  color: white;
-  border: 1px solid #f0c51a;
-}
-.social-links__icon--yellow:hover {
-  background-color: #f0c51a;
 }
 
 .topbar {
@@ -230,6 +227,84 @@ select {
   background: #f0c51a;
 }
 
+.search-form {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.search-form__icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f0c51a;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  background-color: transparent;
+}
+.search-form__icon:hover {
+  background-color: #f0c51a;
+}
+.search-form__icon:focus {
+  background-color: #f0c51a;
+}
+.search-form__icon:focus ~ .search-form__submit {
+  visibility: visible;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.search-form__icon:focus ~ .search-form__input {
+  width: 200px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: white;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.search-form__input {
+  height: 30px;
+  width: 30px;
+  border-style: none;
+  padding: 10px;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  padding-left: 40px;
+}
+.search-form__input:focus {
+  width: 200px;
+  background-color: white;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.search-form__submit {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 45%;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+.search-form:focus-within .search-form__icon {
+  background-color: #f0c51a;
+}
+.search-form:focus-within .search-form__submit {
+  visibility: visible;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+}
+
 .home-bg-img-container {
   position: absolute;
   top: 0;
@@ -240,7 +315,7 @@ select {
   background: url("/assets/images/first.jpg");
   background-position: center;
   background-size: cover;
-  filter: brightness(60%);
+  filter: brightness(70%);
   animation: home-bgImage-container 5s ease-in-out infinite alternate;
 }
 @keyframes home-bgImage-container {

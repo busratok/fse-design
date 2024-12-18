@@ -5,7 +5,7 @@
 @use "../components/left-overlay";
 @use "../components/right-overlay";
 @use "../components/tag";
-
+@use "../components/search-form";
 .home-bg-img-container {
   @include bg-image(100vh, $home-first-bg-img-path);
   @include background-animation(
