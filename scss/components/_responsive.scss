@@ -83,4 +83,13 @@
       display: block;
     }
   }
+
+  .tagline {
+    &__slogan {
+      font-size: 3.6rem;
+      &:after {
+        height: 1rem;
+      }
+    }
+  }
 }

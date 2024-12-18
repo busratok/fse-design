@@ -96,82 +96,6 @@ select {
   display: block;
 }
 
-@media screen and (min-width: 1025px) {
-  .topbar {
-    padding-left: 6rem;
-    padding-right: 3rem;
-    padding-top: 2rem;
-  }
-  .left-overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 700px;
-    height: 100%;
-    z-index: 1;
-  }
-  .left-overlay__shape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 700px;
-    height: 100%;
-    background-color: #1c345e;
-  }
-  .left-overlay__shape--pentagon {
-    background: linear-gradient(to bottom, #121a44, #1c345e, #121a44);
-    clip-path: polygon(75% 0%, 87.5% 25%, 50% 100%, 0% 100%, 0% 0%);
-  }
-  .left-overlay__shape--top {
-    clip-path: polygon(75% 0%, 100% 0%, 87.5% 25%);
-  }
-  .left-overlay__shape--bottom {
-    opacity: 0.7;
-    clip-path: polygon(62.5% 75%, 75% 100%, 50% 100%);
-  }
-  .nav__center {
-    display: flex;
-    justify-content: space-between;
-  }
-  .nav__logo {
-    width: 280px;
-  }
-  .nav__toggle {
-    display: none;
-  }
-  .nav__list {
-    display: flex;
-    gap: 1.5rem;
-    position: relative;
-  }
-  .nav__item {
-    padding: 0;
-  }
-  .nav__item:hover {
-    box-shadow: 0 -4px 0 #f0c51a;
-  }
-  .nav__submenu {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #1c345e;
-    width: 100%;
-    opacity: 0.75;
-    border-bottom: 5px solid #f0c51a;
-    padding: 2.5rem;
-  }
-  .nav__submenu__list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 150px;
-    gap: 1.4rem;
-  }
-  .nav__item--has-submenu:hover .nav__submenu {
-    display: block;
-  }
-}
 .right-overlay {
   display: block;
   position: absolute;
@@ -350,7 +274,7 @@ select {
 }
 .tagline__slogan {
   color: white;
-  font-size: 3.6rem;
+  font-size: 2rem;
   font-weight: bold;
   animation-name: slideIn;
   animation-duration: 2s;
@@ -372,7 +296,7 @@ select {
   left: 0;
   bottom: 5%;
   width: 101%;
-  height: 15px;
+  height: 0.5rem;
   background: #f0c51a;
 }
 
@@ -382,6 +306,88 @@ select {
   z-index: 10;
 }
 
+@media screen and (min-width: 1025px) {
+  .topbar {
+    padding-left: 6rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+  }
+  .left-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 100%;
+    z-index: 1;
+  }
+  .left-overlay__shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 100%;
+    background-color: #1c345e;
+  }
+  .left-overlay__shape--pentagon {
+    background: linear-gradient(to bottom, #121a44, #1c345e, #121a44);
+    clip-path: polygon(75% 0%, 87.5% 25%, 50% 100%, 0% 100%, 0% 0%);
+  }
+  .left-overlay__shape--top {
+    clip-path: polygon(75% 0%, 100% 0%, 87.5% 25%);
+  }
+  .left-overlay__shape--bottom {
+    opacity: 0.7;
+    clip-path: polygon(62.5% 75%, 75% 100%, 50% 100%);
+  }
+  .nav__center {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__logo {
+    width: 280px;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+  }
+  .nav__item {
+    padding: 0;
+  }
+  .nav__item:hover {
+    box-shadow: 0 -4px 0 #f0c51a;
+  }
+  .nav__submenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1c345e;
+    width: 100%;
+    opacity: 0.75;
+    border-bottom: 5px solid #f0c51a;
+    padding: 2.5rem;
+  }
+  .nav__submenu__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 150px;
+    gap: 1.4rem;
+  }
+  .nav__item--has-submenu:hover .nav__submenu {
+    display: block;
+  }
+  .tagline__slogan {
+    font-size: 3.6rem;
+  }
+  .tagline__slogan:after {
+    height: 1rem;
+  }
+}
 .home-bg-img-container {
   position: absolute;
   top: 0;
