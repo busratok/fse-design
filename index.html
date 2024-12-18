@@ -10,10 +10,14 @@
   <body>
     <header>
       <!-- Banner Background Image -->
-      <div class="home-bg-img-container"></div>
+      <div
+        class="home-bg-img-container"
+        role="img"
+        aria-label="Banner image of Paradise High School"
+      ></div>
 
       <!-- Left Overlay Decoration -->
-      <div class="left-overlay">
+      <div class="left-overlay" aria-hidden="true">
         <div class="left-overlay__shape left-overlay__shape--pentagon"></div>
         <div class="left-overlay__shape left-overlay__shape--top"></div>
         <div class="left-overlay__shape left-overlay__shape--bottom"></div>
@@ -26,14 +30,16 @@
           <ul class="topnav__icons">
             <!-- TODO: Add twitter link -->
             <li class="topnav__icon topnav__icon--default">
-              <a href="" target="_blank"> <i class="fab fa-twitter"></i></a>
+              <a href="" target="_blank" aria-label="Twitter profile">
+                <i class="fab fa-twitter"></i
+              ></a>
             </li>
             <li class="topnav__icon topnav__icon--default">
               <i class="fas fa-language"></i>
             </li>
           </ul>
           <!-- Seach Form-->
-          <form id="search-form" class="search-form">
+          <form id="search-form" class="search-form" aria-label="Site search">
             <button type="button" class="search-form__icon">
               <i class="fas fa-search"></i>
             </button>
@@ -42,13 +48,17 @@
               class="search-form__input"
               placeholder="Search"
             />
-            <button type="submit" class="search-form__submit">
+            <button
+              type="submit"
+              class="search-form__submit"
+              aria-label="Submit search"
+            >
               <i class="fas fa-chevron-right"></i>
             </button>
           </form>
         </div>
         <!-- Main navigation -->
-        <nav class="nav">
+        <nav class="nav" aria-label="Main Navigation">
           <!-- TODO: Add href value when pages are ready -->
           <div class="nav__center">
             <div class="nav__header">
@@ -59,7 +69,7 @@
                   class="nav__logo"
                 />
               </a>
-              <button class="nav__toggle">
+              <button class="nav__toggle" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
               </button>
             </div>
@@ -139,7 +149,7 @@
       </div>
 
       <!-- Right Overlay Decoration -->
-      <div class="right-overlay">
+      <div class="right-overlay" aria-hidden="true">
         <div class="right-overlay__triangle right-overlay__triangle--yellow">
           <div class="right-overlay__content">
             <img
